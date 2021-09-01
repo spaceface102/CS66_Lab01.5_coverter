@@ -1,0 +1,19 @@
+You will have to function protypes as the core of the whole assignment:
+
+std::string baseConverter(const std::string& input_number, unsigned input_base,
+unsigned output_base);
+
+std::string baseConverter(const char* input_number, unsigned number_size,
+unsigned input_base, unsigned output_base);
+
+-NOTE, you really only need to make the function that takes a const char*
+as the input number, as the function that takes a const std::string& can
+itself call the other function as so:
+
+return baseConverter(input_number.c_str(), input_number.size(), input_base, output_base);
+
+baseConverter() must be able to handle negative numbers with the
+indicator for a negative number being a single '-' prefix. The output
+number must also have this '-' prefix. The function must also be able to
+take a number with '+' as a prefix, The '+' prefix SHOULD NOT be added
+to the output number, as the positive nature of the number is implied.
