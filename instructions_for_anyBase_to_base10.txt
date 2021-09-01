@@ -1,4 +1,4 @@
-the function protype should be:
+the function prototype should be:
 
 long anyBaseToBase10(const char* input_number, unsigned number_size,
  unsigned input_base);
@@ -8,9 +8,9 @@ the input_number c string will be converted to a long
 number, which will be equivalent to the value of the input_number
 defined by their input_base. This number will ALWAYS be positive
 no matter if input_number is negative. This means ignoring a
-positive or especially a negaitve prefix when doing the calculation.
+positive or especially a negative prefix when doing the calculation.
 
 upon error:
 the function will simply return -1. Since the function
-is ALWAYS expected to return a POSITIVE number upon SUCESS
+is ALWAYS expected to return a POSITIVE number upon SUCCESS
 this should be an obvious error return value.
