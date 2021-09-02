@@ -1,16 +1,47 @@
-the function prototype should be:
-
+This the how the function prototype needs to look like:
 long anyBaseToBase10(const char* input_number, unsigned number_size,
- unsigned input_base);
+    unsigned input_base);
+Input:
+- the function takes in a single char
+Output:
+- the function outputs an integer value
 
-upon success:
-the input_number c string will be converted to a long
-number, which will be equivalent to the value of the input_number
-defined by their input_base. This number will ALWAYS be positive
-no matter if input_number is negative. This means ignoring a
-positive or especially a negative prefix when doing the calculation.
 
-upon error:
-the function will simply return -1. Since the function
-is ALWAYS expected to return a POSITIVE number upon SUCCESS
-this should be an obvious error return value.
+when is the function successful?
+when the input char "digit" is:
+'0' through '9'
+or 'a' through 'z'
+or 'A' through 'Z'
+
+
+what is the output when the function char digit is valid?
+The function will map the passed in char digit
+to the correct integer value.
+
+Ex: 
+charDigitToInteger('9') will return the number 9
+charDigitToInteger('A') will return the number 10
+charDigitToInteger('Z') will return the number 35
+
+-I personally suggest using the ascii values of
+the characters to convert, but you may do as you wish.
+The range for valid output is between 0 and 35 inclusive
+('0' to 'Z')
+
+
+what happens if the input char digit is NOT valid?
+the function returns -1. Since valid output
+will always be positive, a return value of -1
+will result in a obvious error
+
+NOTE: the char digit is considered as invalid
+if it does NOT fall withing the accepted range
+aka outside of:
+'0' through '9'
+or 'a' through 'z'
+or 'A' through 'Z'
+
+NOTE: this function will NOT decide if the digit
+is valid in the context of a base. This function,
+as previously noted, just converts a char "digit"
+to an integer.

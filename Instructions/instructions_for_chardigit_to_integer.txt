@@ -1,0 +1,47 @@
+This the how the function prototype needs to look like:
+int charDigitToInteger(char digit);
+Input:
+- char digit //a single char such as '1' or 'F'
+Output:
+- int   //an integer value between 0 to 35 inclusive upon success
+        //-1 if unsuccessful conversion can be done
+
+
+when is the function successful?
+when the input char "digit" is:
+'0' through '9'
+or 'a' through 'z'
+or 'A' through 'Z'
+
+
+what is the output when the function char digit is valid?
+The function will map the passed in char digit
+to the correct integer value.
+
+Ex: 
+charDigitToInteger('9') will return the number 9
+charDigitToInteger('A') will return the number 10
+charDigitToInteger('Z') will return the number 35
+
+-I personally suggest using the ascii values of
+the characters to convert, but you may do as you wish.
+The range for valid output is between 0 and 35 inclusive
+('0' to 'Z')
+
+
+what happens if the input char digit is NOT valid?
+the function returns -1. Since valid output
+will always be positive, a return value of -1
+will result in a obvious error
+
+NOTE: the char digit is considered as invalid
+if it does NOT fall withing the accepted range
+aka outside of:
+'0' through '9'
+or 'a' through 'z'
+or 'A' through 'Z'
+
+NOTE: this function will NOT decide if the digit
+is valid in the context of a base. This function,
+as previously noted, just converts a char "digit"
+to an integer.
