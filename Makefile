@@ -36,7 +36,7 @@ SRC_FILE_EXTENSION = .cpp
 #if hyperthreading system, this is used
 #for making release and debug build, set
 #to 1 if having weird issues
-NUMBERS_OF_SYSTEM_CORES = 6
+NUMBERS_OF_SYSTEM_CORES = 1
 
 
 #FIELDS RARELY MODIFIED

@@ -3,6 +3,6 @@
 
 #include <string>
 
-std::string anyBaseToBase10(long base10number, unsigned output_base);
+std::string base10ToAnyBase(long base10number, unsigned output_base);
 
 #endif //BASE10_TO_ANYBASE_H
