@@ -4,7 +4,7 @@ Input:
 - char digit //a single char such as '1' or 'F'
 Output:
 - int   //an integer value between 0 to 35 inclusive upon success
-        //-1 if unsuccessful conversion can be done
+        //-1 if unsuccessful/conversion can not be done
 
 
 when is the function successful?
@@ -40,6 +40,8 @@ aka outside of:
 '0' through '9'
 or 'a' through 'z'
 or 'A' through 'Z'
+Ex.
+'*' or '#' ... any non numerical character
 
 NOTE: this function will NOT decide if the digit
 is valid in the context of a base. This function,

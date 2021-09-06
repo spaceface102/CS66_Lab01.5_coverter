@@ -1,4 +1,4 @@
-You will have to function protypes as the core of the whole assignment:
+These are the core function prototypes to build:
 
 std::string baseConverter(const std::string& input_number, unsigned input_base,
 unsigned output_base);
